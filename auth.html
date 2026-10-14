@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f3ed">
+    <title>Oria — Connexion</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="auth.js" defer></script>
+  </head>
+  <body class="auth-page">
+    <header class="site-header">
+      <a class="brand" href="auth.html" aria-label="Oria, accueil">
+        <span class="brand-mark" aria-hidden="true">O</span>
+        <span>oria</span>
+      </a>
+      <nav class="header-nav" aria-label="Navigation principale">
+        <a href="#account-form">Espace membre</a>
+        <span class="nav-dot" aria-hidden="true"></span>
+        <span class="nav-note">Un espace à vous</span>
+      </nav>
+    </header>
+
+    <main class="auth-layout">
+      <section class="welcome-panel" aria-labelledby="welcome-title">
+        <p class="eyebrow"><span class="eyebrow-line"></span> Votre espace personnel</p>
+        <h1 id="welcome-title">Tout commence<br>par <em>vous.</em></h1>
+        <p class="welcome-copy">Retrouvez votre espace et reprenez là où vous en étiez.</p>
+        <div class="welcome-art" aria-hidden="true">
+          <div class="art-ring art-ring-large"></div>
+          <div class="art-ring art-ring-small"></div>
+          <span class="art-sun"></span>
+          <span class="art-caption">PRENEZ<br>VOTRE PLACE</span>
+        </div>
+        <p class="panel-footnote">ORIA <span>—</span> UN ESPACE QUI VOUS RESSEMBLE</p>
+      </section>
+
+      <section class="form-panel" id="account-form" aria-labelledby="form-title">
+        <div class="form-heading">
+          <p class="eyebrow">Ravie de vous retrouver</p>
+          <h2 id="form-title">Bienvenue</h2>
+          <p class="form-intro">Connectez-vous ou créez votre espace en quelques instants.</p>
+        </div>
+
+        <div class="mode-switch" role="tablist" aria-label="Type de formulaire">
+          <button class="mode-button is-active" id="login-tab" type="button" role="tab" aria-selected="true" aria-controls="login-form">Connexion</button>
+          <button class="mode-button" id="register-tab" type="button" role="tab" aria-selected="false" aria-controls="register-form">Créer un compte</button>
+        </div>
+
+        <form id="login-form" class="account-form" novalidate>
+          <label for="login-email">Adresse e-mail</label>
+          <input id="login-email" name="email" type="email" autocomplete="email" placeholder="vous@exemple.fr" required>
+          <label for="login-password">Mot de passe</label>
+          <input id="login-password" name="password" type="password" autocomplete="current-password" placeholder="Votre mot de passe" required>
+          <p class="form-message" id="login-message" role="alert" aria-live="polite"></p>
+          <button class="submit-button" type="submit">Se connecter <span aria-hidden="true">↗</span></button>
+        </form>
+
+        <form id="register-form" class="account-form" hidden novalidate>
+          <label for="register-name">Votre prénom</label>
+          <input id="register-name" name="name" type="text" autocomplete="given-name" placeholder="Camille" required>
+          <label for="register-email">Adresse e-mail</label>
+          <input id="register-email" name="email" type="email" autocomplete="email" placeholder="vous@exemple.fr" required>
+          <label for="register-password">Mot de passe <span class="label-hint">8 caractères minimum</span></label>
+          <input id="register-password" name="password" type="password" autocomplete="new-password" minlength="8" placeholder="Choisissez un mot de passe" required>
+          <label for="register-confirm">Confirmer le mot de passe</label>
+          <input id="register-confirm" name="confirm" type="password" autocomplete="new-password" placeholder="Saisissez-le à nouveau" required>
+          <p class="form-message" id="register-message" role="alert" aria-live="polite"></p>
+          <button class="submit-button" type="submit">Créer mon compte <span aria-hidden="true">↗</span></button>
+        </form>
+
+        <p class="form-legal">En continuant, vous acceptez nos conditions d’utilisation.</p>
+      </section>
+    </main>
+    <footer class="site-footer"><span>© 2026 Oria</span><span>Un espace à vous, simplement.</span></footer>
+  </body>
+</html>
